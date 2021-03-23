@@ -1,0 +1,194 @@
+@font-face {
+    font-family: font1; /* Имя шрифта */
+    src: url(fonts/kz-taurus.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: font2; /* Имя шрифта */
+    src: url(fonts/vag-world-bold.ttf); /* Путь к файлу со шрифтом */
+}
+
+input, select, textarea{
+    color: beige;
+    background-color: #181A1B;
+}
+
+option{
+  color:beige;
+  background:#181A1B;
+}
+
+body{
+    background: url(image/bkg.jpg);
+    background-attachment: fixed;
+    text-indent: 1.5em; /* Отступ первой строки */
+}
+
+img
+{
+    border-radius: 15px;
+}
+
+.osn{
+    border: 4px dotted #353535; /* Параметры границы */
+    background: rgba(0, 0, 0, 0); /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+}
+
+ul {
+    list-style-image: url(image/marker.png); /* Путь к изображению маркера */
+   }
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+.menu-main {
+    list-style: none;
+    margin: 40px 0 5px;
+    padding: 0px 0 5px;
+    text-align: center;
+}
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+    content: "|";
+    color: #606060;
+    display: inline-block;
+    vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+    text-decoration: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 34px 0 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #9d999d;}
+.menu-main a.current, .menu-main a:hover{color: #1133c9;}
+.menu-main a:before,
+.menu-main a:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: 30px;
+    right: 50%;
+    bottom: -5px;
+    left: 50%;
+    background: #960b9b;
+    transition: .5s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}   
+@media (max-width: 550px) {
+.menu-main {padding-top: 0;}
+.menu-main li {display: block;}
+.menu-main li:after {content: none;}
+.menu-main a {
+    padding: 25px 0 20px; 
+    margin: 0 30px;
+}
+}
+
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+    width: 10px; /* ширина для вертикального скролла */
+    height: 8px; /* высота для горизонтального скролла */
+    background-color: #000000;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: #5f0085;
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #7a7a7a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0035a7;
+}
+
+h2:after,
+h3:after,
+h4:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    border-radius: 2px;
+    box-shadow:
+        inset 0 1px 1px rgba(0,0,0,0.5),
+        0 1px 1px rgba(255,255,255,0.3);
+}
+ 
+h2:after { background: #003cff; }
+h3:after { background: #3BF; }
+h4:after { background: #6Cf; }
+ 
+h1 {
+    font-family: 'font2', sans-serif;
+    background: linear-gradient(135deg, #0059ff 30%, #fa0e0e 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0.3em 0.6em ;
+    text-align: center;
+}
+ 
+h2 {
+    margin: 1em 0 .6em 0;
+    padding: 0 0 0 20px;
+    font-weight: normal;
+    color: rgb(14, 0, 145);
+    font-family: 'font2', sans-serif;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    position: relative;
+    font-size: 30px;
+    line-height: 40px;
+}
+ 
+h3 {
+    margin: 1em 0 .6em 0;
+    padding: 0 0 0 20px;
+    font-weight: normal;
+    color: rgb(218, 0, 0);
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    position: relative;
+    font-size: 24px;
+    line-height: 40px;
+    font-family: 'font1', sans-serif;
+}
+ 
+h4 {
+    margin: 1em 0 .6em 0;
+    padding: 0 0 0 20px;
+    font-weight: normal;
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    position: relative;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: 'font1', sans-serif;
+}
+
+h1, h2, h3, h4, ul{
+    line-height: 30px; 
+}
+
+.left {
+    float:left; /* Выравнивание по левому краю */
+    margin: 5px 10px 5px 30px; /* Отступы вокруг картинки */
+   }
+
+.center {
+    margin: 5px 10px 5px 30px; /* Отступы вокруг картинки */
+    text-align: center;
+}
+
+.right {
+    float:right; /* Выравнивание по левому краю */
+    margin: 5px 10px 5px 30px; /* Отступы вокруг картинки */
+}
